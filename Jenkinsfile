@@ -1,10 +1,10 @@
 pipeline
 {
     agent any
-	tools
-	{
-		maven 'Maven'
-	}
+	//tools
+	//{
+	//	maven 'Maven'
+	//}
 	options
     {
         timeout(time: 1, unit: 'HOURS')
