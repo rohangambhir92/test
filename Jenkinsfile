@@ -42,7 +42,7 @@ pipeline
 		{
 			steps
 			{
-				withSonarQubeEnv("Test_Sonar") 
+				withSonarQubeEnv("Test_Sonar_DevOps") 
 				{
 					bat "mvn org.sonarsource.scanner.maven:sonar-maven-plugin:3.2:sonar"
 				}
