@@ -55,8 +55,8 @@ pipeline
 				rtMavenDeployer (
                     id: 'deployer',
                     serverId: '123456789@artifactory',
-                    releaseRepo: 'rohangambhir.3147098',
-                    snapshotRepo: 'rohangambhir.3147098'
+                    releaseRepo: 'rohangambhir_nagp_home_assignment',
+                    snapshotRepo: 'rohangambhir_nagp_home_assignment'
                 )
                 rtMavenRun (
                     pom: 'pom.xml',
