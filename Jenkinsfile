@@ -28,14 +28,14 @@ pipeline
 		{
 			steps
 			{
-				mvn install
+				bat "mvn install"
 			}
 		}
 		stage ('Unit Testing')
 		{
 			steps
 			{
-				mvn test
+				bat "mvn test"
 			}
 		}
 		stage ('Sonar Analysis')
