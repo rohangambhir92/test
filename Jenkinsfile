@@ -21,21 +21,21 @@ pipeline
 		{
 			steps
 			{
-				echo "checkout scm"
+				checkout scm
 			}
 		}
 		stage ('Build')
 		{
 			steps
 			{
-				echo "mvn install"
+				bat mvn install
 			}
 		}
 		stage ('Unit Testing')
 		{
 			steps
 			{
-				echo "mvn test"
+				bat mvn test
 			}
 		}
 		stage ('Sonar Analysis')
@@ -44,7 +44,7 @@ pipeline
 			{
 				withSonarQubeEnv("Test_Sonar") 
 				{
-					echo "mvn org.sonarsource.scanner.maven:sonar-maven-plugin:3.2:sonar"
+					bat mvn org.sonarsource.scanner.maven:sonar-maven-plugin:3.2:sonar
 				}
 			}
 		}
