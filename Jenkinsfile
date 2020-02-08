@@ -21,21 +21,21 @@ pipeline
 		{
 			steps
 			{
-				checkout scm
+				echo "checkout scm"
 			}
 		}
 		stage ('Build')
 		{
 			steps
 			{
-				mvn install
+				echo "mvn install"
 			}
 		}
 		stage ('Unit Testing')
 		{
 			steps
 			{
-				mvn test
+				echo "mvn test"
 			}
 		}
 		stage ('Sonar Analysis')
