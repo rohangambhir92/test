@@ -28,7 +28,7 @@ pipeline
 		{
 			steps
 			{
-				sh "mvn install"
+				bash "mvn install"
 			}
 		}
 		stage ('Unit Testing')
