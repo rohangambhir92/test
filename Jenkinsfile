@@ -44,7 +44,7 @@ pipeline
 			{
 				withSonarQubeEnv("Test_Sonar") 
 				{
-					mvn org.sonarsource.scanner.maven:sonar-maven-plugin:3.2:sonar
+					echo "mvn org.sonarsource.scanner.maven:sonar-maven-plugin:3.2:sonar"
 				}
 			}
 		}
