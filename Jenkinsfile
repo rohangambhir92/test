@@ -54,7 +54,7 @@ pipeline
 			{
 				timeout(time: 1, unit: 'MINUTES') 
 				{
-                			waitForQualityGate abortPipeline: true
+                			waitForQualityGate("devops server sonar") abortPipeline: true
               			}
 			}
 		}
