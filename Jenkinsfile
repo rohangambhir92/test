@@ -48,6 +48,16 @@ pipeline
 				}
 			}
 		}
+	    	stage ('Sonar Quality Gate Check')
+	    	{
+			steps
+			{
+				timeout(time: 1, unit: 'HOURS') 
+				{
+                			waitForQualityGate abortPipeline: true
+              			}
+			}
+		}
 		stage ('Upload to Artifactory')
 		{
 			steps
